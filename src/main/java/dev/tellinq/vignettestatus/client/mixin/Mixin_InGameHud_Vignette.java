@@ -29,17 +29,22 @@ public class Mixin_InGameHud_Vignette {
                     value = "INVOKE",
                     //#if MC >= 1.21.2
                     target = "Lnet/minecraft/util/math/ColorHelper;fromFloats(FFFF)I",
-                    //#elseif MC <= 1.21.1 && MC >= 1.20.1
+                    //#elseif MC <= 1.21.1 && MC >= 1.20
                     //$$ target = "Lnet/minecraft/client/gui/DrawContext;setShaderColor(FFFF)V",
-                    //#elseif MC <= 1.19.4
+                    //#elseif MC <= 1.19.4 && MC >= 1.17
                     //$$ target = "Lcom/mojang/blaze3d/systems/RenderSystem;setShaderColor(FFFF)V",
+                    //#elseif MC <= 1.16.5 && MC >= 1.13
+                    //$$ target = "Lcom/mojang/blaze3d/systems/RenderSystem;color4f(FFFF)V",
+                    //#elseif MC <= 1.12.2 && MC > 1.8.9
+                    //$$ target = "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V",
+                    //#elseif MC <= 1.8.9
+                    //$$ target = "Lcom/mojang/blaze3d/platform/GlStateManager;color(FFFF)V",
                     //#endif
                     ordinal = 1
             )
     )
     //#if MC >= 1.21.2
     private int vignettestatus$wrapColorHelperFromFloats(
-
             float alpha, float red, float green, float blue,
             Operation<Integer> original
     ) {

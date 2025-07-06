@@ -165,11 +165,17 @@ public class VignetteStatusConfig extends Config {
                 return 0.0f;
             }
 
-            if (player.getAir() >= player.getMaxAir()) {
+            float air = player.getAir();
+            //#if MC > 1.12.2
+            float maxAir = player.getMaxAir();
+            //#else
+            //$$ float maxAir = 300;
+            //#endif
+            if (air >= maxAir) {
                 return 0.0f;
             }
 
-            return (float)(player.getMaxAir() - player.getAir()) / (float)player.getMaxAir();
+            return (maxAir - air) / maxAir;
         }
 
     }

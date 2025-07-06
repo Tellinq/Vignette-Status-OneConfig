@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Arrays;
 
 /**
  * Manages activation and fading queues for multiple vignettes over time.
@@ -44,7 +45,7 @@ public class VignetteTransitionManager {
      * @return the selected {@link Vignette} or {@code null} if none qualify
      */
     public static Vignette selectActiveVignette(PlayerEntity player) {
-        List<Vignette> priority = List.of(
+        List<Vignette> priority = Arrays.asList(
                 VignetteStatus.healthVignette,
                 VignetteStatus.airVignette,
                 VignetteStatus.hungerVignette
