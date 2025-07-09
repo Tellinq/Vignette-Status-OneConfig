@@ -48,7 +48,7 @@ public class VignetteStatusConfig extends Config {
         public static boolean enabled = true;
 
         @Color(title = "Color")
-        public static PolyColor color = ColorUtils.rgba(255, 0, 0, 255);
+        public static PolyColor color = ColorUtils.rgba(255, 0, 0, 1.0f);
 
         @Slider(
                 title = "Start Threshold",
@@ -93,7 +93,7 @@ public class VignetteStatusConfig extends Config {
         @Color(
                 title = "Color"
         )
-        public static PolyColor color = ColorUtils.rgba(153, 102, 0, 255);
+        public static PolyColor color = ColorUtils.rgba(153, 102, 0, 1.0f);
 
         @Slider(
                 title = "Start Threshold",
@@ -138,7 +138,7 @@ public class VignetteStatusConfig extends Config {
         @Color(
                 title = "Color"
         )
-        public static PolyColor color = ColorUtils.rgba(0, 0, 255, 255);
+        public static PolyColor color = ColorUtils.rgba(0, 0, 255, 1.0f);
 
         @Slider(
                 title = "Start Threshold",
