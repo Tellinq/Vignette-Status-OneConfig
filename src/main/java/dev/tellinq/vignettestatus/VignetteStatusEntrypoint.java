@@ -82,18 +82,6 @@ public class VignetteStatusEntrypoint
             //#endif
             //#endif
     ) {
-        //#if FORGE && MC <= 1.12.2
-        //$$ if (!event
-        //#if MC <= 1.8.9
-        //$$ .side.isClient
-        //#else
-        //$$ .getSide().isClient()
-        //#endif
-        //$$ ) {
-        //$$     return;
-        //$$ }
-        //#endif
-
         VignetteStatus.INSTANCE.initialize();
     }
 
@@ -111,18 +99,6 @@ public class VignetteStatusEntrypoint
             //#endif
             //#endif
     ) {
-        //#if FORGE && MC <= 1.12.2
-        //$$ if (!event.
-        //#if MC <= 1.8.9
-        //$$ side.isServer
-        //#else
-        //$$ getSide().isServer()
-        //#endif
-        //$$ ) {
-        //$$     return;
-        //$$ }
-        //#endif
-
         // no code here
     }
 
